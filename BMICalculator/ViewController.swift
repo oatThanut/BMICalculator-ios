@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         let currentWeight = Double(sender.value)
         WeightLabel.text = String(format: "%.1f", currentWeight)
         calculate()
-
     }
     
     @IBAction func HeightSlider(_ sender: UISlider) {
@@ -40,6 +39,14 @@ class ViewController: UIViewController {
                 let result = String(format: "%.1f", weight/pow((height/100), 2))
                 BMIValue.text = result
                 changeStage(BMI: result)
+            } else {
+                stageLabel.text = "BMI Calculator"
+                BMIValue.text = "0.0"
+                ImageView.image = UIImage(named: "Logo")
+                Background.backgroundColor =  UIColor(red: 0.102,
+                                                      green: 0.2902,
+                                                      blue: 0.4392,
+                                                      alpha: 1)
             }
         }
     }
