@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,6 +92,9 @@
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="m4V-Ea-HTW">
                                         <rect key="frame" x="-2" y="22.5" width="264" height="31"/>
+                                        <connections>
+                                            <action selector="WeightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qmc-ad-nr2"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -116,6 +120,9 @@
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="ozA-1W-TZF">
                                         <rect key="frame" x="-2" y="22.5" width="264" height="31"/>
+                                        <connections>
+                                            <action selector="HeightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="iSE-ms-HZp"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -135,7 +142,15 @@
                             <constraint firstAttribute="trailing" secondItem="5Ne-uO-uO5" secondAttribute="trailing" constant="30" id="vbU-l2-mK7"/>
                             <constraint firstItem="P4S-TF-a9d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="54" id="yO0-kC-WNs"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="l96-3J-1Iu"/>
                     </view>
+                    <connections>
+                        <outlet property="BMIValue" destination="9IL-PB-Pcn" id="sJG-mZ-B2k"/>
+                        <outlet property="HeightLabel" destination="hxW-1X-YQH" id="oDn-SH-JPn"/>
+                        <outlet property="ImageView" destination="i6y-nU-h66" id="Vvh-lm-7wh"/>
+                        <outlet property="WeightLabel" destination="xed-zh-gJT" id="wPZ-XO-0o4"/>
+                        <outlet property="stageLabel" destination="lXI-fn-v8n" id="yCt-wQ-asW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
